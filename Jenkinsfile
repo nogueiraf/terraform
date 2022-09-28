@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@nogueiraf 
-troy-ingram
-/
-week-24-project
-Public
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Security
-Insights
-week-24-project/Jenkinsfile
-@troy-ingram
-troy-ingram Update Jenkinsfile
-Latest commit b7d9dff on Jul 12
- History
- 1 contributor
-90 lines (72 sloc)  2.47 KB
-
 pipeline {
     agent any
 
@@ -49,7 +21,7 @@ pipeline {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/nogueiraf/terraform.git"
+                            git "https://github.com/troy-ingram/week-24-project.git"
                         }
                     }
                 }
@@ -116,18 +88,3 @@ pipeline {
 
   }
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-week-24-project/compute at master · troy-ingram/week-24-projectweek-24-project/providers.tf at master · troy-ingram/week-24-projectweek-24-project/Jenkinsfile at master · troy-ingram/week-24-project
