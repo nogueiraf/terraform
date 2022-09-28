@@ -1,14 +1,4 @@
 ##################################################################################
-# PROVIDERS
-##################################################################################
-
-provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
-  region     = var.aws_region
-}
-
-##################################################################################
 # DATA
 ##################################################################################
 
@@ -43,12 +33,12 @@ resource "aws_security_group" "bastion2-sg" {
   }
 
 
- ingress {
-     from_port   = 22
-     to_port     = 22
-     protocol    = "tcp"
-     cidr_blocks = ["0.0.0.0/0"]
- }
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
 
   tags = local.common_tags
@@ -60,7 +50,7 @@ resource "aws_instance" "bastion2" {
   ami                    = nonsensitive(data.aws_ssm_parameter.ami.value)
   instance_type          = var.instance_type
   subnet_id              = var.public_subnet_id
-  vpc_security_group_ids = [aws_security_group.bastion-sg.id]
+  vpc_security_group_ids = [aws_security_group.bastion2-sg.id]
   key_name               = "concilmigracao"
   root_block_device {
     volume_type = "gp2"

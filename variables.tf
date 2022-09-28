@@ -23,9 +23,9 @@ variable "vpc_id" {
 }
 
 variable "public_subnet_id" {
-    type = string
-    description = "public subnet"
-    default = "subnet-066e829067dcc48ce"
+  type        = string
+  description = "public subnet"
+  default     = "subnet-066e829067dcc48ce"
 }
 
 variable "instance_type" {
@@ -43,12 +43,12 @@ variable "company" {
 variable "project" {
   type        = string
   description = "Project name for resource tagging"
-  default = "Migracao stack v4"
+  default     = "Migracao stack v4"
 }
 
 variable "name" {
-    type = string
-    description = "tag Name"
+  type        = string
+  description = "tag Name"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
